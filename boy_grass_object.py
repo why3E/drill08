@@ -30,17 +30,15 @@ class Boy:
 class Ball:
     def __init__(self):
         self.x, self.y = self.x, self.y = random.randint(100, 700), 599
-        self.frame = random.randint(0, 7)
         self.size = random.randint(0, 1)
-        self.speed = random.randint(1, 10)
-
+        self.speed = random.randint(1, 12)
         self.image = load_image('ball21x21.png') if self.size == 0 else load_image('ball41x41.png')
 
     def update(self):
         self.y -= self.speed
-        if (self.size == 0 and self.y <= 61):
+        if self.size == 0 and self.y <= 61:
             self.y = 61
-        elif (self.size == 1 and self.y <= 71):
+        elif self.size == 1 and self.y <= 71:
             self.y = 71
 
     def draw(self):
