@@ -38,10 +38,11 @@ class Ball:
 
     def update(self):
         self.y -= self.speed
-        if(self.size == 0 and self.y <= 61):
+        if (self.size == 0 and self.y <= 61):
             self.y = 61
-        elif(self.size == 1 and self.y <= 71):
+        elif (self.size == 1 and self.y <= 71):
             self.y = 71
+
     def draw(self):
         self.image.draw(self.x, self.y)
 
